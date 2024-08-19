@@ -1,0 +1,16 @@
+//To blink an led
+//(same code for buzzer )
+// led negative to ground
+// positive (long ) to 13 pin in arduino uno
+int ledPin = 13;
+int delayT = 1000;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  delay(delayT);
+  digitalWrite(ledPin, LOW);
+  delay(delayT);
+}
