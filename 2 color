@@ -1,0 +1,40 @@
+// Pin numbers for the Two Color LED Module (Change these if you used different pins)
+const int color1Pin = 3; // Digital pin connected to Color 1 of the Two Color LED Module
+const int color2Pin = 5; // Digital pin connected to Color 2 of the Two Color LED Module
+
+// Function declarations
+void setColor1(bool on);
+void setColor2(bool on);
+
+void setup() {
+  pinMode(color1Pin, OUTPUT); // Set Color 1 pin as OUTPUT
+  pinMode(color2Pin, OUTPUT); // Set Color 2 pin as OUTPUT
+}
+
+void loop() {
+  // Turn on Color 1 (e.g., Red)
+  setColor1(true);
+  delay(1000); // Wait for 1 second
+
+  // Turn off Color 1
+  setColor1(false);
+  delay(500); // Wait for 0.5 seconds
+
+  // Turn on Color 2 (e.g., Green)
+  setColor2(true);
+  delay(1000); // Wait for 1 second
+
+  // Turn off Color 2
+  setColor2(false);
+  delay(500); // Wait for 0.5 seconds
+}
+
+// Function to control Color 1
+void setColor1(bool on) {
+  digitalWrite(color1Pin, on ? HIGH : LOW);
+}
+
+// Function to control Color 2
+void setColor2(bool on) {
+  digitalWrite(color2Pin, on ? HIGH : LOW);
+}
