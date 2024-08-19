@@ -1,0 +1,32 @@
+// Define the pins connected to the RGB LED
+const int redPin = 9;   // Red pin
+const int greenPin = 10; // Green pin
+const int bluePin = 11;  // Blue pin
+
+void setup() {
+  // Set the RGB pins as OUTPUT
+  pinMode(redPin, OUTPUT);
+  pinMode(greenPin, OUTPUT);
+  pinMode(bluePin, OUTPUT);
+}
+
+void loop() {
+  // Red color
+  analogWrite(redPin, 255);   // Full intensity
+  analogWrite(greenPin, 0);   // No green
+  analogWrite(bluePin, 0);    // No blue
+  delay(1000);                // Wait for 1 second
+
+  // Green color
+  analogWrite(redPin, 0);     // No red
+  analogWrite(greenPin, 255); // Full intensity
+  analogWrite(bluePin, 0);    // No blue
+  delay(1000);                // Wait for 1 second
+
+  // Blue color
+  analogWrite(redPin, 0);     // No red
+  analogWrite(greenPin, 0);   // No green
+  analogWrite(bluePin, 255);  // Full intensity
+  delay(1000);                // Wait for 1 second
+}
+
