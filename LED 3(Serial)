@@ -1,0 +1,21 @@
+//To blink 3 led in serial
+// led negative to ground
+// positive (long ) to 13 pin in arduino uno
+// same for other led
+
+int ledPins[] = {13, 12, 11};
+int delayT = 1000;
+
+void setup() {
+  for (int i=0; i&lt;3; i++) {
+    pinMode(ledPins[i], OUTPUT);
+  }
+}
+void loop() {
+  for (int i=0; i&lt;3; i++) {
+    digitalWrite(ledPins[i], HIGH);
+    delay(delayT);
+    digitalWrite(ledPins[i], LOW);
+    delay(delayT);
+  }
+}
